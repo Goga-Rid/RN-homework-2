@@ -3,10 +3,13 @@ import { Stack } from 'expo-router';
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index"  />
-      <Stack.Screen name="about"  />
-      <Stack.Screen name="languages"  />
+    <Stack screenOptions={{
+      headerStyle: {
+        backgroundColor: '#25292e',
+      },
+      headerTintColor: '#95d0c2', }}>
+       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+       <Stack.Screen name="+not-found" />
     </Stack>
   );
 }

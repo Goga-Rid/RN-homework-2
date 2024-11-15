@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
-import ProgrammingLanguageCard from '../components/myLanguages';
-import { programmingLangList } from '../src/data/programmingLang';
+import ProgrammingLanguageCard from '../../components/myLanguages';
+import { programmingLangList } from '../../src/data/programmingLang';
 
 export default function Languages() {
     const [isRefreshing, setIsRefreshing] = useState(false);

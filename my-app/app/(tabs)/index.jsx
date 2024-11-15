@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, StatusBar } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function Index() {
   return (
+    <>
+    <StatusBar barStyle="light-content" backgroundColor="#25292e" />
     <View style={styles.container}>
       <Text style={styles.text}>Навигация</Text>
       <Link href="/about" style={styles.button} component={TouchableOpacity}>
@@ -13,6 +15,7 @@ export default function Index() {
         <Text style={styles.buttonText}>Мои языки программирования</Text>
       </Link>
     </View>
+    </>
   );
 }
 
@@ -26,6 +29,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 40,
     color: '#fff',
+    marginBottom: 30,
   },
   button: {
     backgroundColor: '#fff',
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 20,
-    color: '#333', // graphite color
+    color: '#333', 
     textAlign: 'center',
   },
 });
